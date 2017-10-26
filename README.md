@@ -28,8 +28,8 @@ Using just the *name* and *id* attributes we can define simple structures such a
 
 To read more complex messages we need to define the field list that makes up the payload. For
 example, the [EndClientTurn](client/EndClientTurn.json) message comprises three fields; *tick* (the
-time that the command was issued), *checksum* (the game state checksum), and *commands*, an array of
-[CommandComponent](client/CommandComponent.json) structures:
+time that the command was issued), *an unknown value*, and *commands*, an array of
+[CommandComponent](components/CommandComponent.json) structures:
 
 
 ```json
@@ -37,9 +37,14 @@ time that the command was issued), *checksum* (the game state checksum), and *co
   "id": 14102,
   "name": "EndClientTurn",
   "fields": [
-    {"name": "tick", "type": "INT"},
-    {"name": "checksum", "type": "INT"},
-    {"name": "commands", "type": "CommandComponent[]"}
+    {"name": "unkBool", "type": "BOOLEAN"},
+    {"name": "tick", "type": "RRSINT32"},
+    {"name":" unk", "type": "RRSINT32"},
+    {"name": "commands", "type": "CommandComponent[]", "lengthType": "RRSINT32"},
+    {"type": "BYTE"},
+    {"type": "BYTE"},
+    {"type": "BYTE"},
+    {"type": "BYTE"}
   ]
 }
 ```
@@ -104,31 +109,36 @@ example, the CommandComponent has extensions that are conditional on the command
 {
   "name": "CommandComponent",
   "fields": [
-    {"name": "id", "type": "INT"}
+    {"name": "id", "type": "RRSINT32"}
   ],
   "extensions": [
     {
-      "id": 4,
-      "comment": "Donate unit in response to troop request",
-      "fields": [
-        {"type": "INT"},
-        {"name": "messageId", "type": "INT"},
-        {"name": "unitId", "type": "INT"},
-        {"type": "INT"},
-        {"name": "tick", "type": "INT"}
-      ]
+		"id": 203,
+		"name": "OpenBox (203)",
+		"fields": [
+			{"name":"boxID", "type": "RRSINT32"},
+			{"name":"boxCount", "type": "RRSINT32"},
+			{"name":"itemType", "type": "RRSINT32"},
+			{"name":"itemCount", "type": "RRSINT32"},
+			{"type": "RRSINT32"},
+			{"type": "RRSINT32"},
+			{"type": "RRSINT32"}		  
+		]
     },
     {
-      "id": 10,
-      "comment": "Donate unit to clan war castle",
+      "id": 504,
+      "name": "CollectNewEventCoins (504)",
       "fields": [
-        {"type": "INT"},
-        {"name": "homeId", "type": "INT"},
-        {"name": "unitId", "type": "INT"},
-        {"name": "index", "type": "INT"},
-        {"name": "tick", "type": "INT"}
+        {"name": "tickStart", "type": "RRSINT32"},
+        {"name": "tickEnd", "type": "RRSINT32"},
+        {"type": "RRSLONG"},
+        {"name": "challengeID", "type": "RRSINT32"},
+        {"type": "RRSINT32"}
       ]
-    },
+    }
+  ]
+}
+
 ```
 
 Default Values
