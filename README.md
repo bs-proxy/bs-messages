@@ -27,9 +27,9 @@ Using just the *name* and *id* attributes we can define simple structures such a
 ```
 
 To read more complex messages we need to define the field list that makes up the payload. For
-example, the [EndClientTurn](client/EndClientTurn.json) message comprises three fields; *tick* (the
+example, the [EndClientTurn](client/EndClientTurn.json) message comprises four fields; *unkBool* (a bool that is always false, so far.) , *tick* (the
 time that the command was issued), *an unknown value*, and *commands*, an array of
-[CommandComponent](components/CommandComponent.json) structures:
+[CommandComponent](component/CommandComponent.json) structures:
 
 
 ```json
