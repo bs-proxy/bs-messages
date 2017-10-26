@@ -1,0 +1,10 @@
+{
+  "id": 24112,
+  "name": "UdpConnectionInfo",
+  "fields": [
+    {"name": "port", "type": "RRSINT"},
+    {"name": "ip", "type": "STRING"},
+    {"type": "STRING"},
+    {"name": "password", "type": "STRING"}
+  ]
+}

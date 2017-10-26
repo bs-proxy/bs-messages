@@ -1,0 +1,13 @@
+{
+  "id": 24101,
+  "name": "OwnHomeData",
+  "fields": [
+    {"type": "RRSINT32"},
+    {"type": "RRSINT32"},
+    {"name":"trophies", "type": "RRSINT32"},
+    {"name":"highestTrophies", "type": "RRSINT32"},
+    {"type": "RRSINT32"},
+    {"type": "RRSINT32"},
+    {"name":"avatarID", "type": "SCID"}	
+  ]
+}

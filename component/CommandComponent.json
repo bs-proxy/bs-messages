@@ -1,0 +1,32 @@
+{
+  "name": "CommandComponent",
+  "fields": [
+    {"name": "id", "type": "RRSINT32"}
+  ],
+  "extensions": [
+    {
+		"id": 203,
+		"name": "OpenBox (203)",
+		"fields": [
+			{"name":"boxID", "type": "RRSINT32"},
+			{"name":"boxCount", "type": "RRSINT32"},
+			{"name":"itemType", "type": "RRSINT32"},
+			{"name":"itemCount", "type": "RRSINT32"},
+			{"type": "RRSINT32"},
+			{"type": "RRSINT32"},
+			{"type": "RRSINT32"}		  
+		]
+    },
+    {
+      "id": 504,
+      "name": "CollectNewEventCoins (504)",
+      "fields": [
+        {"name": "tickStart", "type": "RRSINT32"},
+        {"name": "tickEnd", "type": "RRSINT32"},
+        {"type": "RRSLONG"},
+        {"name": "challengeID", "type": "RRSINT32"},
+        {"type": "RRSINT32"}
+      ]
+    }
+  ]
+}

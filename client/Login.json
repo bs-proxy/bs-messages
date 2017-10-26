@@ -1,0 +1,8 @@
+{
+  "id": 10101,
+  "name": "Login",
+  "fields": [
+    {"name": "accountId", "type": "LONG"},
+    {"name": "passToken", "type": "STRING"}
+  ]
+}

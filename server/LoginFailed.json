@@ -1,0 +1,15 @@
+{
+  "id": 20103,
+  "name": "LoginFailed",
+  "fields": [
+    {"name": "errorCode", "type": "BYTE"},
+    {"name": "resourceFingerprintData", "type": "IGNORE"},
+    {"name": "redirectDomain", "type": "IGNORE"}, 
+    {"name": "contentURL", "type": "IGNORE"}, 
+    {"name": "updateURL", "type": "IGNORE"}, 
+    {"name": "reason", "type": "IGNORE"}, 
+    {"name": "secondsUntilMaintenanceEnd", "type": "IGNORE"},
+    {"type": "IGNORE"},
+    {"type": "IGNORE"}
+  ]
+}

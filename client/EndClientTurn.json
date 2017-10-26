@@ -1,0 +1,14 @@
+{
+  "id": 14102,
+  "name": "EndClientTurn",
+  "fields": [
+    {"name": "unkBool", "type": "BOOLEAN"},
+    {"name": "tick", "type": "RRSINT32"},
+    {"name":" ping", "type": "RRSINT32"},
+    {"name": "commands", "type": "CommandComponent[]", "lengthType": "RRSINT32"},
+    {"type": "BYTE"},
+    {"type": "BYTE"},
+    {"type": "BYTE"},
+    {"type": "BYTE"}
+  ]
+}
